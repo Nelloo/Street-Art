@@ -1,0 +1,30 @@
+Arborescence : 
+./css/            : les différentes feuilles de styles
+./js/             : les fichiers javascript (si vous en utilisez)
+./img/            : les différentes images du site
+./modules         : les différents modules
+    * utilisateur : la gestion de l'utilisateur (connexion/deconnexion....)
+    * chanson     : la gestion des chansons
+    * main        : le module principal
+    ...
+./uploads         : la où seront uploadés les différents fichiers
+./scripts         : les scripts
+./helpers         : les scripts d'aide, la classe HTML par exemple !
+./config          : les fichiers de config (uniquement connexion à Mysql pour l'instant)
+./model           : la gestion des tables
+    * base        : tout le code (ne touchez à rien ;-)
+    * mymodel     : votre modèle de données
+        * queries : pour vos requêtes
+        * tables  : les tables associées
+
+
+Les modules : 
+Chaque module contient un répertoire à son nom
+ vues: les sous répertoires où il y a les vus.
+ actions  : le fichier ou il y a les actions 
+ 
+scripts : 
+./scripts/module.sh toto : crée un module toto
+./scripts/action.sh toto test  : crée une action test dans le module toto.
+
+ 
