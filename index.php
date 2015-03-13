@@ -63,11 +63,11 @@
 <html>
 <head>
 	<meta charset='UTF-8'>
-	<title>Ton petit album photo</title>
+	<title>Street'art</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<link rel='stylesheet' type='text/css' href='<?php echo URL;?>/css/bootstrap.css' />
-	<link rel='stylesheet' type='text/css' href='<?php echo URL;?>/css/style.css' />
+	<link rel='stylesheet' type='text/css' href='<?php echo URL;?>/css/stylesite.css' />
 	<script type='text/javascript' src='<?php echo URL;?>/js/jquery-1.9.0.js'></script>
 	<script type='text/javascript' src='<?php echo URL;?>/js/bootstrap.js'></script>
 	<script type="text/javascript" src="<?php echo URL;?>js/ajax.js"></script>
@@ -79,19 +79,89 @@
 
 <!-- Ici le header et tout ce que vous voulez -->
 
-<h1>Bienvenue sur mon album photo</h1>
-<?php
-$URL = URL;
-if(isset($_SESSION['id'])) {
-	echo "Bonjour ". $_SESSION["login"];
-	echo "<a href='$URL/utilisateur/deconnexion'>Deconnexion</a>";
-	echo "<a href='$URL/photos/upload'>Uploader</a>";
-	echo "<a href='$URL/utilisateur/profil'>Profil</a>";
-} else {
-	echo "<a href='$URL/utilisateur/inscription'>Inscrivez vous</a>";
-	echo "<br /><a href='$URL/utilisateur/connexion'>connectez vous</a>";
-}
-?>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="container-fluid">
+                <div class="row">
+                    <div  class='col-md-4'><span id="titre">Street Art</span></div>
+                    <div class='col-md-3'>
+                        <form class="formulaire">
+                           <input id="recherche" class="champ" type="text" placeholder="Recherche">
+                           <input id="rech_valide" type="submit" value="OK" />
+                       </form>
+                    </div>
+                    <div class='col-md-4'>
+                        <?php
+                            $URL = URL;
+                            echo "<ul class='nav navbar-nav'>";
+                            if(isset($_SESSION['id'])) {
+//                                echo "<li><a href='#'>Accueil</a></li>
+//                                    <li><a href='#ar'>Artistes</a></li>
+//                                    <li><a href='#alb'>Oeuvres</a></li>";
+                                echo "<li><a href='$URL/utilisateur/profil'>Profil</a></li>";
+                                echo "<li><a href='$URL/photos/upload'>Uploader</a></li>";
+                                echo "<li><a href='$URL/utilisateur/deconnexion'>Déconnexion</a></li>";
+                            } else {
+                                echo "<li><a href='$URL/utilisateur/inscription'>Inscription</a></li>";
+                                echo "<li><a href='$URL/utilisateur/connexion'>Connexion</a></li>";
+                            }
+                            echo "</ul>";
+                        ?>
+                    </div>
+                    <div class='col-md-1'></div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.nav-collapse -->
+</nav>
+
+<div class='container-fluid'>
+    <div class='row'>
+
+        <div class='col-md-12' id='entete'>
+            <h1 id='Bienvenue'>
+            <?php
+                if(isset($_SESSION['id'])) {
+                    echo "Bienvenue, ".$_SESSION['login']." !";
+                }
+                else {
+                    echo "Bienvenue sur Street'Art !"; 
+                }
+            ?>
+            </h1>
+        </div>
+
+    </div>
+</div>
+
+<div id="profil">
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-md-3' ></div>
+            <div class='col-md-6'>
+                <?php
+                    if(isset($_SESSION['id'])) {
+                        echo "<img id='silhouette' src='img/silhouette.png' alt='silhouette' onmousedown='return false'></img>";
+                    }
+                ?>
+            </div>
+            <div class='col-md-3'></div>
+        </div>
+    </div>
+
+   <?php
+    if(isset($_SESSION['id'])) {
+        echo "<div class='container-fluid'>
+            <div class='row'>
+                <div class='col-md-2'></div>";
+        echo $result; // $result contient le résultat de module->action.  
+        echo "  <div class='col-md-2'></div>
+            </div>
+        </div>";
+    }
+    ?>
+</div>
 
 <?php
 if(isset($info)){
@@ -99,12 +169,9 @@ if(isset($info)){
 }
 ?>
 
-<?php echo $result; // $result contient le résultat de module->action. ?>
+<?php if(!isset($_SESSION['id'])) {echo $result;} ?>
 
-
-
-<footer>Le pied de la page</footer>
-<!-- Ici le footer et tout ce que vous voulez -->
+<footer></footer>
 
 <div class="modal"><!-- Place at bottom of page --></div>
 </body>

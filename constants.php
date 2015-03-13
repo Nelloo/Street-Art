@@ -5,7 +5,7 @@
     //define("ENV","PROD"); // For production
 
     // URL of you application
-    define("URL","/street-art");
+    define("URL","localhost/street-art/");
     
     
     // Constants for Mysql access

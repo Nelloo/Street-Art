@@ -1,0 +1,195 @@
+body {
+    padding:none;
+    margin:0px;
+    width:100%;
+    height: 100%;
+    background: url(../img/skylineny.jpg) no-repeat center fixed;
+    background-size:cover;
+    margin:0px;
+}
+#titre {
+    display: inline;
+    color:#e2e5d1;
+    vertical-align: middle;
+    font-size: 18px;
+}
+nav {
+	display:fixed;
+}
+nav.navbar.navbar-default.navbar-fixed-top{
+	width:100%;
+    background-color:#293540;
+    text-align: center;
+}
+div.container{
+	width:100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+div#navbar.vabar-collapse.collapse{
+    width:100%;
+    background-color:#293540;
+}
+ul.nav.navbar-nav{
+    display:inline;
+    width:100%;
+    height:100%;
+    text-align: justify;
+}
+li{
+    padding:30px;
+}
+div.row{
+    padding:0;
+}
+li{
+    display: inline;
+    color:#e2e5d1;
+    vertical-align: middle;
+    font-size: 18px;
+}
+nav a{
+    display: inline;
+    color:#e2e5d1;
+    text-align:center;
+    display:inline;
+    font-size: 18px;
+}
+#recherche{
+     width:80%;
+     border-radius: 10px;
+     -moz-border-radius: 10px;
+     -o-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     background-color: #e2e5d1;
+     padding-left:10px;
+}
+#rech_valide{
+	background-color:rgba(0,0,0,0);
+	color:#e2e5d1;
+	border:1px #e2e5d1 solid;
+	transition: all 0.2s ease;
+}
+#rech_valide:hover{
+	background-color:#45b29d;
+	color:#333;
+	border:1px #45b29d solid;
+}
+#entete{
+    background-color: #45b29d;
+    text-align: center;
+    width:100%;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+#Bienvenue{
+    font-size:48px;
+    display:inline;
+    color:#ffffff;
+    margin:0;
+    font-weight: normal;
+}
+#connexion, #inscription{
+    position: absolute;
+    top:45%;
+    width:100%;
+}
+#connexion h2, #inscription h2{
+    text-align: center;
+    color:#f1f1f1;
+    margin-top:17%;
+    font-size:40px;
+}
+#connexion form, #inscription form{
+    background-color: rgba(0,0,0,0.7);
+    display: table;
+    margin:0 auto;
+    padding:15px 20px;
+    color:#f1f1f1;
+}
+input[type='text'], input[type='password'], input[type='email']
+{
+    padding-left:5px;
+    font-style: italic;
+}
+input[type='submit']
+{
+    background-color: rgba(0,0,0,0);
+    color:#fff;
+    border:#fff 1px solid;
+    padding:4px 12px;
+    transition:background-color 0.3s ease,
+        border 0.3s ease;
+}
+input[type='submit']:hover
+{
+    background-color:#45b29d;
+    border:1px #45b29d solid;
+}
+#profil{
+	height:90vh;
+}
+#silhouette{
+    padding-top: 1%;
+    width:15%;
+    height:15%;
+    display: block;
+    margin-top:300px;
+    margin-bottom:5%;
+    margin-left: auto;
+    margin-right: auto;
+    border:6px solid #ddd;
+    border-radius:10%;
+    background-color:#f1f1f1;
+}
+.stat{
+	background-color: rgba(255,255,255,0.8);
+	margin-left:10px;
+	margin-right:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size: 24px;
+    color:#d9241b;
+    display:block;
+    text-align: center;
+    display:block;
+    text-align: center;
+}
+
+#photos, #album, #followers, #abonnement{
+    font-size: 24px;
+    color:#d9241b;
+    border-bottom:1px #d9241b solid;
+}
+
+#nbphotos, #nbalbum, #nbfollowers, #nbabonnement{
+    font-size: 24px;
+    display:block;
+    color:#333;
+}
+
+#ar{
+	background-color:#f1f1f1;
+	height:90vh;
+}
+
+#ar h1{
+    font-size:36px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight:normal;
+    color:#45b29d;
+}
+
+#alb{
+	background-color:#f9f9f9;
+	height:90vh;
+}
+
+#alb h1{
+    font-size:36px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight:normal;
+    color:#45b29d;
+}
